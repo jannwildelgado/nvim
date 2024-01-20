@@ -17,7 +17,7 @@ local plugins = {
   'lukas-reineke/indent-blankline.nvim',
 
   -- Git Commit
-  -- 'tpope/vim-fugitive',
+  'tpope/vim-fugitive',
 
   {
     'windwp/nvim-autopairs',
