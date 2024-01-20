@@ -4,7 +4,6 @@ vim.opt.laststatus = 2
 vim.opt.autowrite = true
 vim.opt.cursorline = true
 vim.opt.autoread = true
-vim.opt.relativenumber = true
 
 -- use spaces for tabs and whatnot
 vim.opt.tabstop = 2
@@ -12,7 +11,12 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
-vim.cmd [[ set noswapfile ]]
+vim.opt.incsearch = true
+vim.opt.hlsearch = false
 
---Line numbers
+vim.opt.scrolloff = 8
+
+vim.opt.relativenumber = true
 vim.wo.number = true
+
+-- vim.cmd [[ set noswapfile ]]
