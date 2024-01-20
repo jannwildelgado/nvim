@@ -13,11 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-  'christoomey/vim-tmux-navigator',
-  'lukas-reineke/indent-blankline.nvim',
-
   -- Git Commit
   'tpope/vim-fugitive',
+
+  'christoomey/vim-tmux-navigator',
+  'lukas-reineke/indent-blankline.nvim',
+  'mbbill/undotree',
 
   {
     'windwp/nvim-autopairs',
@@ -75,6 +76,7 @@ local plugins = {
     dependencies = {
       'folke/neodev.nvim',
       'williamboman/mason-lspconfig.nvim',
+
       {
         'williamboman/mason.nvim', config = true
       },
