@@ -21,6 +21,13 @@ local plugins = {
   'mbbill/undotree',
 
   {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    }
+  },
+
+  {
     'windwp/nvim-autopairs',
     opts = {
       fast_wrap = {},
