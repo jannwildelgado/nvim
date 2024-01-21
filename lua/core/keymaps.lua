@@ -16,14 +16,24 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
 
-vim.keymap.set('n', '<s-k>', ':echo "You have press <S-k>" <CR>')
+vim.keymap.set('n', '<s-k>', ':echo "You have press <S-k>"')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<c-s>', '<cmd>w<CR>', { desc = 'Save file' })
 
+vim.keymap.set('n', 'J', 'mzJ`z')
+vim.keymap.set('n', '<C-a>', 'mzK`z')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<c-u>', '<c-u>zz')
+
+-- vim.keymap.set('x', '<leader>p', '"_dP')
+
 -- Comment API
 vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
-vim.keymap.set('n', '<leader>/', function() 
+vim.keymap.set('n', '<leader>/', function()
   require('Comment.api').toggle.linewise.current()
 end)
 

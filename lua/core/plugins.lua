@@ -18,6 +18,7 @@ local plugins = {
 
   'christoomey/vim-tmux-navigator',
   'lukas-reineke/indent-blankline.nvim',
+
   'mbbill/undotree',
 
   {
@@ -31,18 +32,13 @@ local plugins = {
     'windwp/nvim-autopairs',
     opts = {
       fast_wrap = {},
-      disable_filetype = {
-        'TelescopePrompt',
-        'vim'
-      }
+      disable_filetype = { 'TelescopePrompt', 'vim' }
     }
   },
 
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons'
-    }
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
 
   {
@@ -64,17 +60,13 @@ local plugins = {
 
   {
     'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects'
-    },
+    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
     build = ':TSUpdate'
   },
 
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim'
-    }
+    dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
   {
