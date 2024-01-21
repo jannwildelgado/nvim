@@ -70,6 +70,16 @@ local plugins = {
     }
   },
 
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
+      'hrsh7th/cmp-nvim-lsp',
+      'rafamadriz/friendly-snippets'
+    }
+  },
+
   -- Config 
   {
     'neovim/nvim-lspconfig',
@@ -78,23 +88,15 @@ local plugins = {
       'williamboman/mason-lspconfig.nvim',
 
       {
-        'williamboman/mason.nvim', config = true
+        'williamboman/mason.nvim',
+        config = true
       },
+
       {
         'j-hui/fidget.nvim',
         tag = 'legacy',
         opts = {}
       }
-    }
-  },
-
-  {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'rafamadriz/friendly-snippets'
     }
   }
 }
