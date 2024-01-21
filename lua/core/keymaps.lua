@@ -29,7 +29,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
 
--- vim.keymap.set('x', '<leader>p', '"_dP')
+-- vim.keymap.set('x', '<leader>p', "\"_dP")
 
 -- Comment API
 vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
