@@ -44,3 +44,9 @@ vim.keymap.set('n', '<leader>e', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus on 
 
 -- NvimUndoTree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+
+-- vim.g.undotree_WindowLayout = 2
+-- if !exists('g:undotree_WindowLayout')
+--     let g:undotree_WindowLayout = 1
+-- endif
+

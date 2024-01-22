@@ -2,7 +2,7 @@ vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
 vim.opt.autowrite = true
--- -- require('core.config.lsp')
+
 vim.opt.cursorline = true
 vim.opt.autoread = true
 
@@ -19,5 +19,9 @@ vim.opt.scrolloff = 8
 
 vim.opt.relativenumber = true
 vim.wo.number = true
+
+-- Undotree related
+vim.g.undotree_WindowLayout = 1
+vim.g.undotree_SplitWidth = 50
 
 -- vim.cmd [[ set noswapfile ]]

@@ -1,6 +1,6 @@
 local options = {
   options = {
-    disabled_filetypes = { 'NvimTree' },
+    disabled_filetypes = { 'NvimTree', 'undotree', 'diff' },
     icons_enabled = true,
     theme = 'nightfly',
     component_separators = '|',
