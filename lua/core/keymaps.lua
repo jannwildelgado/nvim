@@ -41,3 +41,6 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 -- NvimTree
 vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle open/close file exlorer' })
 vim.keymap.set('n', '<leader>e', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus on file explorer' })
+
+-- NvimUndoTree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
