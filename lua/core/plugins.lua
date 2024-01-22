@@ -23,6 +23,9 @@ local plugins = {
 
   {
     'nvim-tree/nvim-tree.lua',
+    opts = function ()
+      return require('core.config.nvimtree')
+    end,
     dependencies = {
       'nvim-tree/nvim-web-devicons'
     }
@@ -38,7 +41,12 @@ local plugins = {
 
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    opts = function ()
+      return require('core.config.lualine')
+    end,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    }
   },
 
   {
@@ -60,8 +68,10 @@ local plugins = {
 
   {
     'nvim-treesitter/nvim-treesitter',
-    dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    build = ':TSUpdate'
+    build = ':TSUpdate',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects'
+    }
   },
 
   {

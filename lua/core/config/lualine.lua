@@ -1,6 +1,6 @@
-require('lualine').setup {
-  disabled_filetypes = { 'NVimTree' },
+local options = {
   options = {
+    disabled_filetypes = { 'NvimTree' },
     icons_enabled = true,
     theme = 'nightfly',
     component_separators = '|',
@@ -8,3 +8,4 @@ require('lualine').setup {
   }
 }
 
+return options

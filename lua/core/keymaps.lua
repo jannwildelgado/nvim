@@ -29,8 +29,6 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
 
--- vim.keymap.set('x', '<leader>p', "\"_dP")
-
 -- Comment API
 vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
 vim.keymap.set('n', '<leader>/', function()
@@ -39,3 +37,7 @@ end)
 
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
+
+-- NvimTree
+vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle open/close file exlorer' })
+vim.keymap.set('n', '<leader>e', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus on file explorer' })
