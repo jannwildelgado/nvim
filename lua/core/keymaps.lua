@@ -5,10 +5,10 @@ vim.g.maplocalleader = ' '
 
 -- if OS is linux/mac
 -- if separator == '/' then
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+-- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+-- vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+-- vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+-- vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 -- end
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
@@ -26,6 +26,8 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-a>', 'mzK`z')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
@@ -45,9 +47,4 @@ vim.keymap.set('n', '<leader>e', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus on 
 
 -- NvimUndoTree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
-
--- vim.g.undotree_WindowLayout = 2
--- if !exists('g:undotree_WindowLayout')
---     let g:undotree_WindowLayout = 1
--- endif
 
