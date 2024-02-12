@@ -3,12 +3,11 @@ vim.g.maplocalleader = ' '
 
 -- local separator = package.config:sub(1, 1)
 
--- if OS is linux/mac
 -- if separator == '/' then
--- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
--- vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
--- vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
--- vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+--   vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+--   vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+--   vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+--   vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 -- end
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
@@ -16,8 +15,6 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
-
-vim.keymap.set('n', '<s-k>', ':echo "You have press <S-k>"')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<c-s>', '<cmd>w<CR>', { desc = 'Save file' })
@@ -32,14 +29,14 @@ vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
 
+vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
+
 -- Comment API
 vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
 vim.keymap.set('n', '<leader>/', function()
   require('Comment.api').toggle.linewise.current()
 end)
-
-vim.keymap.set('v', '<', '<gv', { desc = 'Indent line' })
-vim.keymap.set('v', '>', '>gv', { desc = 'Indent line' })
 
 -- NvimTree
 vim.keymap.set('n', '<C-n>', '<cmd> NvimTreeToggle <CR>', { desc = 'Toggle open/close file exlorer' })
@@ -48,3 +45,10 @@ vim.keymap.set('n', '<leader>e', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus on 
 -- NvimUndoTree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
+-- NvimTrouble 
+vim.keymap.set('n', '<leader>xx', function() require('trouble').toggle() end)
+vim.keymap.set('n', '<leader>xw', function() require('trouble').toggle('workspace_diagnostics') end)
+vim.keymap.set('n', '<leader>xd', function() require('trouble').toggle('document_diagnostics') end)
+vim.keymap.set('n', '<leader>xq', function() require('trouble').toggle('quickfix') end)
+vim.keymap.set('n', '<leader>xl', function() require('trouble').toggle('loclist') end)
+vim.keymap.set('n', 'gR', function() require('trouble').toggle('lsp_references') end)

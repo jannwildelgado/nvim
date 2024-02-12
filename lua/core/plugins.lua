@@ -55,6 +55,13 @@ local plugins = {
   },
 
   {
+    'folke/trouble.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {}
+  },
+
+  -- Theme
+  {
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000
