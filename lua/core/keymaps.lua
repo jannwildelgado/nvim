@@ -46,9 +46,7 @@ vim.keymap.set('n', '<leader>e', '<cmd> NvimTreeFocus <CR>', { desc = 'Focus on 
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- NvimTrouble 
-vim.keymap.set('n', '<leader>xx', function() require('trouble').toggle() end)
-vim.keymap.set('n', '<leader>xw', function() require('trouble').toggle('workspace_diagnostics') end)
-vim.keymap.set('n', '<leader>xd', function() require('trouble').toggle('document_diagnostics') end)
-vim.keymap.set('n', '<leader>xq', function() require('trouble').toggle('quickfix') end)
-vim.keymap.set('n', '<leader>xl', function() require('trouble').toggle('loclist') end)
-vim.keymap.set('n', 'gR', function() require('trouble').toggle('lsp_references') end)
+vim.keymap.set('n', '<leader>xx', '<cmd>TroubleToggle workspace_diagnostics<CR>', { desc = 'Workspace Diagnostics' })
+vim.keymap.set('n', '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>', { desc = 'Document Diagnostics' })
+vim.keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<CR>', { desc = 'Quickfix List (Trouble Diagnostics)' })
+
