@@ -24,4 +24,5 @@ vim.wo.number = true
 vim.g.undotree_WindowLayout = 1
 vim.g.undotree_SplitWidth = 50
 
+vim.o.termguicolors = true
 -- vim.cmd [[ set noswapfile ]]
