@@ -1,13 +1,7 @@
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system {
-    'git',
-    'clone',
-    '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable',
-    lazypath
-  }
+  local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
+  vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -38,15 +32,6 @@ local plugins = {
     }
   },
 
-  {
-    'nvim-lualine/lualine.nvim',
-    opts = function ()
-      return require('core.config.lualine')
-    end,
-    dependencies = {
-      'nvim-tree/nvim-web-devicons'
-    }
-  },
 
   {
     'folke/which-key.nvim',
@@ -59,7 +44,16 @@ local plugins = {
     opts = {}
   },
 
-  -- Theme
+  {
+    'nvim-lualine/lualine.nvim',
+    opts = function ()
+      return require('core.config.lualine')
+    end,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    }
+  },
+
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -98,10 +92,30 @@ local plugins = {
     'hrsh7th/nvim-cmp',
     dependencies = {
       'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-nvim-lsp',
+      'saadparwaiz1/cmp_luasnip',
       'rafamadriz/friendly-snippets'
     }
+  },
+
+  { -- Collection of various small independent plugins/modules
+    'echasnovski/mini.nvim',
+    config = function()
+      -- Better Around/Inside textobjects
+      --
+      -- Examples:
+      --  - va)  - [V]isually select [A]round [)]paren
+      --  - yinq - [Y]ank [I]nside [N]ext [']quote
+      --  - ci'  - [C]hange [I]nside [']quote
+      require('mini.ai').setup({ n_lines = 500 })
+
+      -- Add/delete/replace surroundings (brackets, quotes, etc.)
+      --
+      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
+      -- - sd'   - [S]urround [D]elete [']quotes
+      -- - sr)'  - [S]urround [R]eplace [)] [']
+      require('mini.surround').setup()
+    end
   },
 
   -- Config 
