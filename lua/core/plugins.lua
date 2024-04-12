@@ -3,6 +3,7 @@ if not vim.loop.fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
   vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
@@ -39,7 +40,10 @@ local plugins = {
   {
     'folke/trouble.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opts = {}
+    opts = {},
+    config = function()
+      vim.keymap.set('n', '<leader>t', '<ESC>:Trouble<CR>')
+    end
   },
 
   {
