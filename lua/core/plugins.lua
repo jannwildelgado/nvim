@@ -32,17 +32,22 @@ local plugins = {
     }
   },
 
-  {
-    'folke/which-key.nvim',
-    opts = {}
-  },
+  -- {
+  --   'folke/which-key.nvim',
+  --   opts = {}
+  -- },
 
   {
     'folke/trouble.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {},
     config = function()
-      vim.keymap.set('n', '<leader>t', '<ESC>:Trouble<CR>')
+      vim.keymap.set('n', '<leader>xx', function ()
+        require('trouble').toggle()
+      end)
+      vim.keymap.set('n', '<leader>xq', function()
+        require('trouble').toggle('quickfix')
+      end)
     end
   },
 
