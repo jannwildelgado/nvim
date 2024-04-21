@@ -75,7 +75,9 @@ local plugins = {
     lazy = false,
     opts = {},
     config = function ()
-      vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
+      vim.keymap.set('v', '<leader>/', function ()
+        require('Comment.api').toggle.linewise(vim.fn.visualmode())
+      end)
       vim.keymap.set('n', '<leader>/', function()
         require('Comment.api').toggle.linewise.current()
       end)
