@@ -1,10 +1,18 @@
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-  vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+  vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    '--branch=stable',
+    lazyrepo,
+    lazypath
+  }
 end
-
 vim.opt.rtp:prepend(lazypath)
+
+-- print(os.getenv("HOME") .. '/.nvim/undotree')
 
 local plugins = {
   'tpope/vim-fugitive',
@@ -31,11 +39,6 @@ local plugins = {
       disable_filetype = { 'TelescopePrompt', 'vim' }
     }
   },
-
-  -- {
-  --   'folke/which-key.nvim',
-  --   opts = {}
-  -- },
 
   {
     'folke/trouble.nvim',
@@ -75,9 +78,7 @@ local plugins = {
     lazy = false,
     opts = {},
     config = function ()
-      vim.keymap.set('v', '<leader>/', function ()
-        require('Comment.api').toggle.linewise(vim.fn.visualmode())
-      end)
+      vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
       vim.keymap.set('n', '<leader>/', function()
         require('Comment.api').toggle.linewise.current()
       end)
