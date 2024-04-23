@@ -29,5 +29,5 @@ vim.g.undotree_SplitWidth = 50
 vim.o.termguicolors = true
 -- vim.cmd [[ set noswapfile ]]
 
--- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+-- vim.opt.undodir = "~/.vim/undodir"
 vim.opt.undofile = true
