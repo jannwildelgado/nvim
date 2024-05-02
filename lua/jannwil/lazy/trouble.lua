@@ -9,6 +9,7 @@ return {
     -- vim.keymap.set('n', '<leader>xq', function()
     --   require('trouble').toggle('quickfix')
     -- end)
+
     require('trouble').setup({
       icons = false
     })

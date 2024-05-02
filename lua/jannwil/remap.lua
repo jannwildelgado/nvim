@@ -23,6 +23,8 @@ vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 vim.keymap.set('v', '<', '<gv', {})
 vim.keymap.set('v', '>', '>gv', {})
 
+vim.keymap.set('n', '<leader>p', '"+p')
+
 -- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 -- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
