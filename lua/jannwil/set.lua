@@ -13,7 +13,7 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.opt.incsearch = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 
 vim.opt.scrolloff = 10
 

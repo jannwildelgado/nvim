@@ -4,6 +4,7 @@ vim.g.netrw_winsize = 25
 
 vim.g.mapleader = ' '
 
+-- vim.keymap.set('n', '<leader>-', vim.cmd.Ex)
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
