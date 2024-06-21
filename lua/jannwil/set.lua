@@ -32,4 +32,4 @@ vim.o.termguicolors = true
 -- vim.opt.undodir = "~/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.winbar = "%m%f"
+-- vim.opt.winbar = "%m%f"
