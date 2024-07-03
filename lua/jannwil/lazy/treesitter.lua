@@ -14,6 +14,7 @@ return {
           'lua',
           'tsx',
           'vim',
+          'zig',
           'go'
         }
       })
