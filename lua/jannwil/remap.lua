@@ -39,6 +39,11 @@ vim.keymap.set('n', '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>',
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+vim.keymap.set('n', '<leader>tc', ':tabnew<CR>')
+vim.keymap.set('n', '<Tab>', ':tabnext<CR>')
+vim.keymap.set('n', '<S-Tab>', ':tabprev<CR>')
+vim.keymap.set('n', '<C-w>', ':tabclose<CR>')
+
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
