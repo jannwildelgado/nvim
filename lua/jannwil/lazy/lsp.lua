@@ -68,6 +68,7 @@ return {
       -- rust_analyzer = {},
 
       -- gopls = {},
+      vuels = {},
 
       tsserver = {},
 

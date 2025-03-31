@@ -15,7 +15,8 @@ return {
           'tsx',
           'vim',
           'zig',
-          'go'
+          'go',
+          'vue'
         }
       })
     end

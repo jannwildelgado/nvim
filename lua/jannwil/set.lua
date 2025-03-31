@@ -32,4 +32,7 @@ vim.o.termguicolors = true
 -- vim.opt.undodir = "~/.vim/undodir"
 vim.opt.undofile = true
 
+vim.opt.foldcolumn = '1'
+vim.opt.foldmethod = 'manual'
+
 -- vim.opt.winbar = "%m%f"
