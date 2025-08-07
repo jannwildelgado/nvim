@@ -3,8 +3,15 @@ return {
   dependencies = {
     'folke/neodev.nvim',
     'williamboman/mason-lspconfig.nvim',
-    { 'williamboman/mason.nvim', config = true },
-    { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} }
+    {
+      'williamboman/mason.nvim',
+      config = true
+    },
+    {
+      'j-hui/fidget.nvim',
+      tag = 'legacy',
+      opts = {}
+    }
   },
   config = function()
     local builtin = require('telescope.builtin')
@@ -66,11 +73,15 @@ return {
       -- clangd = {},
       -- pyright = {},
       -- rust_analyzer = {},
-
       -- gopls = {},
-      vuels = {},
 
-      tsserver = {},
+      tailwindcss = {
+        filetypes = { 'html', 'css', 'vue' }
+      },
+
+      tsserver = {
+        filetypes = { 'javascript', 'typescript', 'vue', 'vite' }
+      },
 
       html = {
         filetypes = { 'html', 'twig', 'hbs' }
