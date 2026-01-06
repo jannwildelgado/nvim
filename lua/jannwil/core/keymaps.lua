@@ -38,7 +38,7 @@ map('n', '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>', { desc = '
 map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-map('n', '<leader>tc', ':tabnew<CR>')
-map('n', '<Tab>', ':tabnext<CR>')
-map('n', '<S-Tab>', ':tabprev<CR>')
-map('n', '<C-w>', ':tabclose<CR>')
+-- map('n', '<leader>tc', ':tabnew<CR>')
+-- map('n', '<Tab>', ':tabnext<CR>')
+-- map('n', '<S-Tab>', ':tabprev<CR>')
+-- map('n', '<C-w>', ':tabclose<CR>')
