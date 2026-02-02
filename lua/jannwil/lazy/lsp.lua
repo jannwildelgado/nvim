@@ -11,6 +11,7 @@ return {
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		local servers = {
+      tailwindcss = {},
       ts_ls = {},
 			lua_ls = {
 				Lua = {
